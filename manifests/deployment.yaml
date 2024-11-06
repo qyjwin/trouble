@@ -16,12 +16,12 @@ spec:
       tolerations:
       - key: taint-test
         operator: Equal
-        value: value
+        value: taint-value
         effect: NoSchedule
       containers:
         - name: "troubleshooting-app"
           image: cepgbaseacr.azurecr.io/troubleshooting:latest
           resources:
             limits:
-              memory: 800Mi
-              cpu: 1
+              memory: 512Mi
+              cpu: 500m
